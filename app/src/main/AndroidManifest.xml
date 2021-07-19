@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ir.royrodriguez.papiroos">
+
+    <application
+        android:name="ir.figureapp.papiroos.Base"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="ir.figureapp.papiroos.activity.EditActivity"></activity>
+        <activity android:name="ir.figureapp.papiroos.activity.ProfileActivity" />
+        <activity android:name="ir.figureapp.papiroos.activity.AddressActivity" />
+        <activity android:name="ir.figureapp.papiroos.activity.RequestsActivity" />
+        <activity android:name="ir.figureapp.papiroos.activity.NewRequestActivity" />
+        <activity android:name="ir.figureapp.papiroos.activity.MainActivity" />
+        <activity
+            android:name="ir.figureapp.papiroos.activity.LoginActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

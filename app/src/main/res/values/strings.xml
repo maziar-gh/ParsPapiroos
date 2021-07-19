@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">پارس پاپیروس</string>
+
+    <string name="main_title">Transition Button</string>
+    <string name="main_button">ورود</string>
+    <string name="main_email_hint">شماره همراه</string>
+    <string name="main_password_hint">رمز عبور</string>
+</resources>
