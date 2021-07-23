@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.royrodriguez.papiroos.TransitionButton;
 import com.royrodriguez.papiroos.utils.WindowUtils;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import ir.royrodriguez.papiroos.R;
@@ -31,8 +32,10 @@ public class LoginActivity extends AppCompatActivity {
     TransitionButton transitionButton;
     @BindView(R.id.img_logo)
     ImageView img_logo;
-    @BindView(R.id.constraint_main)
-    FrameLayout constraint_footer;
+    @BindView(R.id.frame_main)
+    FrameLayout frame_main;
+    @BindView(R.id.const_login)
+    ConstraintLayout const_login;
     @BindView(R.id.edt_pass)
     EditText edt_pass;
     @BindView(R.id.edt_phone)
@@ -43,6 +46,14 @@ public class LoginActivity extends AppCompatActivity {
     TextView tv_forgotpass;
     @BindView(R.id.tv_register)
     TextView tv_register;
+    @BindView(R.id.const_forgot)
+    ConstraintLayout const_forgot;
+    @BindView(R.id.btn_forgot_back)
+    Button btn_forgot_back;
+    @BindView(R.id.btn_phone_back)
+    Button btn_phone_back;
+    @BindView(R.id.const_register)
+    ConstraintLayout const_register;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
 
         WindowUtils.makeStatusbarTransparent(this);
         getSupportActionBar().hide();
-
 
 
         transitionButton.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +107,53 @@ public class LoginActivity extends AppCompatActivity {
         HeaderAnimation();
 
 
+        btn_forgot_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                const_login.setVisibility(View.VISIBLE);
+                const_forgot.setVisibility(View.INVISIBLE);
+
+                transitionButton.setVisibility(View.VISIBLE);
+                edt_pass.setVisibility(View.VISIBLE);
+                edt_phone.setVisibility(View.VISIBLE);
+                btn_down.setVisibility(View.VISIBLE);
+                tv_forgotpass.setVisibility(View.VISIBLE);
+                tv_register.setVisibility(View.VISIBLE);
+            }
+        });
+
+        tv_forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                const_login.setVisibility(View.INVISIBLE);
+                const_forgot.setVisibility(View.VISIBLE);
+            }
+        });
+
+
+
+        btn_phone_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                const_login.setVisibility(View.VISIBLE);
+                const_register.setVisibility(View.INVISIBLE);
+
+                transitionButton.setVisibility(View.VISIBLE);
+                edt_pass.setVisibility(View.VISIBLE);
+                edt_phone.setVisibility(View.VISIBLE);
+                btn_down.setVisibility(View.VISIBLE);
+                tv_forgotpass.setVisibility(View.VISIBLE);
+                tv_register.setVisibility(View.VISIBLE);
+            }
+        });
+
+        tv_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                const_login.setVisibility(View.INVISIBLE);
+                const_register.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
 

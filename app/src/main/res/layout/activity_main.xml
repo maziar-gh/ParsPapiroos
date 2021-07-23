@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#EFEFEF"
     android:orientation="vertical"
-    tools:context=".activity.MainActivity">
+    tools:context="ir.figureapp.papiroos.activity.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
                 <!-- YOUR CONTENT -->
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/img_new_gif"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:scaleType="fitCenter"
@@ -43,44 +43,15 @@
             android:layout_height="match_parent"
             android:elevation="5dp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_newrequest"
-                android:layout_width="135dp"
-                android:layout_height="110dp"
-                android:layout_marginTop="270dp"
-                android:layout_marginEnd="45dp"
-                android:background="#FFFFFF"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="25dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
-                app:cardElevation="3dp"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="آخرین ورود : 1400/04/28 ۱۴:۵۱ "
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1.8"
-                        app:srcCompat="@drawable/add" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_margin="5dp"
-                        android:layout_weight="1.2"
-                        android:gravity="center"
-                        android:text="درخواست جدید"
-                        android:textSize="16sp" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_requests"
@@ -89,10 +60,10 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="270dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -129,10 +100,10 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="45dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_newrequest">
 
@@ -168,10 +139,10 @@
                 android:layout_marginStart="45dp"
                 android:layout_marginTop="24dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_requests">
 
@@ -206,10 +177,10 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="50dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_profile">
@@ -245,10 +216,10 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_edt_phone">
@@ -284,10 +255,10 @@
                 android:layout_height="40dp"
                 android:layout_marginTop="8dp"
                 android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 app:cardCornerRadius="25dp"
                 app:cardElevation="3dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_edt_pass">
@@ -317,15 +288,44 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="آخرین ورود : 1400/04/28 ۱۴:۵۱ "
-                app:layout_constraintBottom_toBottomOf="parent"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_newrequest"
+                android:layout_width="135dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="270dp"
+                android:layout_marginEnd="45dp"
+                android:background="#FFFFFF"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="3dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.8"
+                        app:srcCompat="@drawable/add" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1.2"
+                        android:gravity="center"
+                        android:text="درخواست جدید"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

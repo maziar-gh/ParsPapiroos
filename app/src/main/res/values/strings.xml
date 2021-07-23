@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">پارس پاپیروس</string>
 
-    <string name="main_title">Transition Button</string>
     <string name="main_button">ورود</string>
     <string name="main_email_hint">شماره همراه</string>
     <string name="main_password_hint">رمز عبور</string>
+
+    <string name="activity_newrequest">درخواست جدید</string>
+    <string name="activity_requests">درخواست ها</string>
+    <string name="activity_edit_phone">تغییر شماره همراه</string>
+    <string name="activity_edit_pass">تغییر رمز عبور</string>
+    <string name="activity_profile">پروفایل</string>
+    <string name="activity_address">آدرس های من</string>
+
 </resources>

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ir.royrodriguez.papiroos">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="ir.figureapp.papiroos.Base"
         android:allowBackup="true"
@@ -10,12 +12,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="ir.figureapp.papiroos.activity.EditActivity"></activity>
-        <activity android:name="ir.figureapp.papiroos.activity.ProfileActivity" />
-        <activity android:name="ir.figureapp.papiroos.activity.AddressActivity" />
-        <activity android:name="ir.figureapp.papiroos.activity.RequestsActivity" />
-        <activity android:name="ir.figureapp.papiroos.activity.NewRequestActivity" />
-        <activity android:name="ir.figureapp.papiroos.activity.MainActivity" />
+        <activity android:label="@string/activity_edit_phone"
+            android:name="ir.figureapp.papiroos.activity.EditActivity"/>
+        <activity android:label="@string/activity_profile"
+            android:name="ir.figureapp.papiroos.activity.ProfileActivity" />
+        <activity android:label="@string/activity_address"
+            android:name="ir.figureapp.papiroos.activity.AddressActivity" />
+        <activity android:label="@string/activity_requests"
+            android:name="ir.figureapp.papiroos.activity.RequestsActivity" />
+        <activity android:label="@string/activity_newrequest"
+            android:name="ir.figureapp.papiroos.activity.NewRequestActivity" />
+        <activity android:label="@string/app_name"
+            android:name="ir.figureapp.papiroos.activity.MainActivity" />
         <activity
             android:name="ir.figureapp.papiroos.activity.LoginActivity"
             android:theme="@style/SplashTheme">
